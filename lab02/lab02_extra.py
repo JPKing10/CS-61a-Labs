@@ -101,3 +101,17 @@ def cycle(f1, f2, f3):
     19
     """
     "*** YOUR CODE HERE ***"
+    def iterations(n):
+        chain = lambda x: x
+        i = 1
+        for i in range (i, n+1):
+            if i % 3 == 1:
+                chain = compose1(f1, chain)
+            elif i % 3 == 2:
+                chain = compose1(f2, chain)
+            elif i % 3 == 0:
+                chain = compose1(f3, chain)
+        return chain
+    return iterations
+
+            
