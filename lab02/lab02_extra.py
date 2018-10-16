@@ -36,6 +36,7 @@ def composite_identity(f, g):
     False
     """
     "*** YOUR CODE HERE ***"
+    return lambda x: f(g(x)) == g(f(x))
 
 def count_cond(condition):
     """Returns a function with one parameter N that counts all the numbers from
@@ -65,6 +66,13 @@ def count_cond(condition):
     8
     """
     "*** YOUR CODE HERE ***"
+    def count(N):
+        count = 0
+        for i in range(1, N+1):
+            if condition(N, i): count += 1
+        return count
+    return count
+
 
 def cycle(f1, f2, f3):
     """Returns a function that is itself a higher-order function.
