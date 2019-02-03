@@ -6,3 +6,6 @@ def twenty_eighteen():
     2018
     """
     return 2*(5+1)+6+(1000*2)
+
+def lab_1_test():
+    print("This is lab 1")
